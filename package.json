@@ -17,5 +17,8 @@
     "eslint-plugin-import": "^2.25.4",
     "husky": "^7.0.4",
     "jest": "^27.4.7"
+  },
+  "dependencies": {
+    "sass": "^1.49.0"
   }
 }
