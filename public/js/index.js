@@ -1,3 +1,4 @@
+/* eslint-disable no-new */
 import PageComponent from "./components/PageComponent.js";
 
 const container = document.querySelector("body");
@@ -9,9 +10,8 @@ async function getPokemons() {
   const results = await pokeApi.json();
 
   const pokeArray = results.results;
-  console.log(pokeArray);
-  return results;
+
+  return pokeArray;
 }
-(async () => {})();
 
 getPokemons();
