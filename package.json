@@ -1,7 +1,6 @@
 {
   "name": "202201-w3cwe-albert-dominguez",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll --verbose",
@@ -34,5 +33,14 @@
   },
   "jest": {
     "testEnvironment": "jsdom"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albertdc1984/W3CWE-albert-dominguez.git"
+  },
+  "bugs": {
+    "url": "https://github.com/albertdc1984/W3CWE-albert-dominguez/issues"
+  },
+  "homepage": "https://github.com/albertdc1984/W3CWE-albert-dominguez#readme",
+  "description": ""
 }
