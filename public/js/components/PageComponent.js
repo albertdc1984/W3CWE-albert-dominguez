@@ -1,3 +1,5 @@
+/* eslint-disable class-methods-use-this */
+/* eslint-disable no-new */
 import Component from "./Component.js";
 import PokeCard from "./PokeCard.js";
 
