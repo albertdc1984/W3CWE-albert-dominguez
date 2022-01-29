@@ -16,7 +16,7 @@ async function getPokemons() {
   });
 
   const pokeArray = await Promise.all(pokePromises);
-  console.log(pokeArray);
+
   return pokeArray;
 }
 
