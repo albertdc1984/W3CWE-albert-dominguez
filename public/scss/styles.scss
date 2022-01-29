@@ -1,0 +1,22 @@
+* {
+  background-color: #ffcb05;
+  color: black;
+
+  font-family: "Karla", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Press Start 2P", cursive;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-header {
+  width: 80wv;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
