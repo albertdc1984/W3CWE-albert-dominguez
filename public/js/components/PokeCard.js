@@ -1,7 +1,7 @@
 import Component from "./Component.js";
 
 class PokeCard extends Component {
-  constructor(parentElement, className) {
+  constructor(parentElement, className, pokemon) {
     super(parentElement, className);
 
     this.generateHtml();

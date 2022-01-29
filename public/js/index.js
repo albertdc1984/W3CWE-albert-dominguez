@@ -1,9 +1,17 @@
-import PokeCard from "./components/PokeCard.js";
+import PageComponent from "./components/PageComponent.js";
 
-const container = document.querySelector(".poke-cards-container");
+const container = document.querySelector("body");
 
-const card = new PokeCard(container, "poke-card");
+new PageComponent(container, "div");
 
-const showCard = (cards) => cards;
+async function getPokemons() {
+  const pokeApi = await fetch("https://pokeapi.co/api/v2/pokemon");
+  const results = await pokeApi.json();
 
-showCard(card);
+  const pokeArray = results.results;
+  console.log(pokeArray);
+  return results;
+}
+(async () => {})();
+
+getPokemons();
