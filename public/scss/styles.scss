@@ -6,6 +6,11 @@
   font-family: "Open Sans", sans-serif;
   font-family: "Press Start 2P", cursive;
 }
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
 
 a:link,
 a:visited,
@@ -15,8 +20,15 @@ a:active {
 }
 
 .nav-header {
-  width: 80wv;
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+}
+.poke-card {
+  width: 33%;
+}
+.poke-cards-container {
+  width: 90%;
 }
