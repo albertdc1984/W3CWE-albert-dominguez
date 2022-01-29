@@ -1,5 +1,6 @@
 /* eslint-disable no-new */
 import PageComponent from "./components/PageComponent.js";
+import PokeCard from "./components/PokeCard.js";
 
 const container = document.querySelector("body");
 
@@ -20,4 +21,12 @@ async function getPokemons() {
   return pokeArray;
 }
 
-getPokemons();
+async function createCards(pokemonArray) {
+  const pokeArray = await pokemonArray;
+  const containerCards = document.querySelector(".poke-cards-container");
+  pokeArray.forEach(async (pokemon) => {
+    new PokeCard(containerCards, "poke-card", await pokemon);
+  });
+}
+
+createCards(getPokemons());
