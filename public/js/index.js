@@ -11,4 +11,3 @@ new PokeCard(container, "poke-card");
 new PokeCard(container, "poke-card");
 new PokeCard(container, "poke-card");
 new PokeCard(container, "poke-card");
-console.log("fuck it bro");
