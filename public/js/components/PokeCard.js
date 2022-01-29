@@ -8,7 +8,7 @@ class PokeCard extends Component {
   }
 
   generateHtml() {
-    this.element.innerHTML = `<img src="img/pokeball.png"><p class="name-status"></p>`;
+    this.element.innerHTML = `<img src=${this.pokemon.sprites.front_default}><p class="name-status">${this.pokemon.name}</p>`;
   }
 }
 

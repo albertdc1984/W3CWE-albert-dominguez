@@ -14,3 +14,5 @@ async function getPokemons() {
 }
 
 getPokemons();
+
+export default getPokemons;

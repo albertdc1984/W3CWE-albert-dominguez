@@ -1,7 +1,6 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable no-new */
 import Component from "./Component.js";
-import PokeCard from "./PokeCard.js";
 
 class PageComponent extends Component {
   constructor(parentElement) {
@@ -22,13 +21,6 @@ class PageComponent extends Component {
       <section class="poke-cards-container"></section>
     </main>
     <footer></footer>`;
-
-    this.renderPokeCards();
-  }
-
-  renderPokeCards() {
-    const container = document.querySelector(".poke-cards-container");
-    new PokeCard(container, "poke-card");
   }
 }
 
