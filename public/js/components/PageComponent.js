@@ -12,7 +12,7 @@ class PageComponent extends Component {
   generateHtml() {
     this.element.innerHTML = `<header>
       <nav class="nav-header">
-        <a href="">My Pokemons</a><img src="img/pokemon.png" /><a href=""
+        <a href="mypokemons.html">My Pokemons</a><img src="img/pokemon.png" /><a href="index.html"
           >All Pokemons</a
         >
       </nav>

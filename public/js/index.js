@@ -12,14 +12,24 @@ async function generatePage(urlApi) {
   const [pokemons, urlNext, urlPrev] = await getPokemons(urlApi);
   createCards(pokemons);
   if (urlPrev) {
-    new ButtonComponent("Previous 20", async () => {
-      generatePage(urlPrev);
-    });
+    new ButtonComponent(
+      document.querySelector("footer"),
+      "footer-button",
+      "Previous 20",
+      async () => {
+        generatePage(urlPrev);
+      }
+    );
   }
   if (urlNext) {
-    new ButtonComponent("Next 20", async () => {
-      generatePage(urlNext);
-    });
+    new ButtonComponent(
+      document.querySelector("footer"),
+      "footer-button",
+      "Next 20",
+      async () => {
+        generatePage(urlNext);
+      }
+    );
   }
 }
 generatePage(urlPokemonApi);
