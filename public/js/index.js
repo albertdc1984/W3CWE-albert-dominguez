@@ -1,32 +1,25 @@
 /* eslint-disable no-new */
 import PageComponent from "./components/PageComponent.js";
-import PokeCard from "./components/PokeCard.js";
+import { getPokemons, createCards } from "./components/pokeApiTemp.js";
+import ButtonComponent from "./components/ButtonComponent.js";
 
+const urlPokemonApi = "https://pokeapi.co/api/v2/pokemon";
 const container = document.querySelector("body");
 
-new PageComponent(container, "div");
-
-async function getPokemons() {
-  const pokeApi = await fetch("https://pokeapi.co/api/v2/pokemon");
-  const results = await pokeApi.json();
-
-  const pokePromises = results.results.map(async ({ url }) => {
-    const pokemonData = await fetch(url);
-    const pokemon = await pokemonData.json();
-    return pokemon;
-  });
-
-  const pokeArray = await Promise.all(pokePromises);
-
-  return pokeArray;
+async function generatePage(urlApi) {
+  document.body.innerHTML = "";
+  new PageComponent(container);
+  const [pokemons, urlNext, urlPrev] = await getPokemons(urlApi);
+  createCards(pokemons);
+  if (urlPrev) {
+    new ButtonComponent("Previous 20", async () => {
+      generatePage(urlPrev);
+    });
+  }
+  if (urlNext) {
+    new ButtonComponent("Next 20", async () => {
+      generatePage(urlNext);
+    });
+  }
 }
-
-async function createCards(pokemonArray) {
-  const pokeArray = await pokemonArray;
-  const containerCards = document.querySelector(".poke-cards-container");
-  pokeArray.forEach(async (pokemon) => {
-    new PokeCard(containerCards, "poke-card", await pokemon);
-  });
-}
-
-createCards(getPokemons());
+generatePage(urlPokemonApi);
