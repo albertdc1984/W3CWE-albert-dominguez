@@ -36,6 +36,7 @@ main {
   align-items: center;
   background-color: #316cb0;
   color: #ffcb05;
+  box-shadow: 2px 2px 4px #000000;
 }
 .poke-card {
   width: 300px;
@@ -63,4 +64,20 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+footer {
+  background-color: #316cb0;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 4px 4px 6px 4px #000000;
+  button {
+    background-color: #ffa805;
+    color: #316cb0;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px;
+  }
 }
