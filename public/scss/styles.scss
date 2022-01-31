@@ -86,9 +86,22 @@ footer {
 }
 
 .card-extended {
-  width: 60vw;
+  width: 40vw;
   height: 90vh;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 4px 4px 6px 4px #000000;
+  justify-content: space-around;
   background-color: #ffa805;
-  color: #316cb0;
+  color: black;
   border-radius: 20px;
+  img {
+    width: 300px;
+    margin: -30px;
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
 }
