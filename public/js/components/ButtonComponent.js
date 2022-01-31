@@ -1,8 +1,8 @@
 import Component from "./Component.js";
 
 class ButtonComponent extends Component {
-  constructor(nextOrPrevText, actionOnClick) {
-    super(document.querySelector("footer"), "footer-button", "button");
+  constructor(parentElement, className, nextOrPrevText, actionOnClick) {
+    super(parentElement, className, "button");
 
     this.generateHTML(nextOrPrevText);
 
