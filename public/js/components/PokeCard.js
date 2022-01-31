@@ -37,7 +37,7 @@ class PokeCard extends Component {
       <p>Height:${this.pokemon.height}</p>
       <p>Base Experience:${this.pokemon.base_experience}</p>
       </div>
-   `;
+      `;
     });
   }
 }
